@@ -59,7 +59,8 @@ Click Deploy.
 
 ### 📁 Project Structure
 
-```link-shortener/
+```
+link-shortener/
 ├── data/                # Auto‑created: links.json, analytics.json
 ├── public/
 │   ├── index.html       # Retro game UI
@@ -70,7 +71,7 @@ Click Deploy.
 └── README.md
 ```
 
-### Built With
+### 🛠️Built With
 
 - Express – web framework
 - express-rate-limit – abuse protection
