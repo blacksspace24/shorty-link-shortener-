@@ -17,7 +17,7 @@ A fast, self‑hosted URL shortener with a pixel‑perfect retro game interface,
 
 ## 🖼️ Screenshot
 
-![ShortLink Screenshot](https://via.placeholder.com/800x400?text=Retro+Link+Shortener+UI)
+<img width="1533" height="862" alt="Screenshot (15)" src="https://github.com/user-attachments/assets/a419c85b-ed5f-44ec-adb4-868b524cf8ae" />
 
 ## 📦 Installation
 
