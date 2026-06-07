@@ -31,17 +31,56 @@ A fast, self‑hosted URL shortener with a pixel‑perfect retro game interface,
 git clone https://github.com/your-username/link-shortener.git
 cd link-shortener
 npm install
-
+```
 Run Locally
-bash
+```bash
 npm start
 Visit http://localhost:3000 and start shortening URLs.
-
-🧪 Usage
+```
+### 🧪 Usage
 
 Web Interface
 
-1. Paste a long URL into the input field.
-2. Click Shorten – get a short link like http://localhost:3000/abc123.
-3. Copy the link or use it immediately.
-4. Every click is counted and displayed in the recent links table.
+1.Paste a long URL into the input field.
+2.Click Shorten – get a short link like http://localhost:3000/abc123.
+3.Copy the link or use it immediately.
+4.Every click is counted and displayed in the recent links table.
+
+### 🚀 Deployment
+
+Push your code to a GitHub repository.
+Click New + → Web Service → connect your repo.
+Use these settings:
+```Build Command: npm install
+Start Command: node server.js
+```
+Click Deploy.
+
+### 📁 Project Structure
+
+```link-shortener/
+├── data/                # Auto‑created: links.json, analytics.json
+├── public/
+│   ├── index.html       # Retro game UI
+│   ├── style.css        # Pixel‑perfect styling
+│   └── script.js        # Frontend logic (copy, load history, clear)
+├── server.js            # Express backend + analytics + rate limiting
+├── package.json
+└── README.md
+```
+
+### Built With
+
+Express – web framework
+express-rate-limit – abuse protection
+request-ip – client IP extraction
+ua-parser-js – browser/OS/device detection
+geoip-lite – IP to location mapping
+Press Start 2P – pixel game font
+
+### 🤝 Contributing
+Pull requests are welcome. For major changes, open an issue first.
+
+### 📄 License
+MIT – use it freely for personal or commercial projects.
+
