@@ -103,7 +103,7 @@ form.addEventListener('submit', async (e) => {
   document.body.classList.add('loading-cursor');
   
   try {
-    const response = await fetch(`${API_BASE}/shorten`, {
+    const response = await fetch(`${API_BASE}/shorten/web`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ url })

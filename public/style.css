@@ -49,6 +49,73 @@ body::before {
   100% { opacity: 0.95; }
 }
 
+/* Top Navigation Bar */
+.top-nav {
+  background: #0b1418;
+  border-bottom: 3px solid #4affb5;
+  padding: 14px 8px;    /* increased top/bottom from 8px to 14px */
+  margin-bottom: 20px;
+  box-shadow: 0 3px 0 #0a3a2a;
+}
+
+.nav-container {
+  max-width: 100%;      /* allow full width, but content still has side padding from .top-nav */
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;           /* smaller gap between logo and social links */
+  flex-wrap: wrap;
+}
+
+.logo a {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 1.1rem;      /* slightly smaller for better fit */
+  color: #ffff80;       /* bright yellow – much more visible */
+  text-decoration: none;
+  text-shadow: 2px 2px 0 #0a3a2a;
+  transition: 0.1s linear;
+  white-space: nowrap;  /* prevent wrapping on small screens */
+}
+
+.logo a:hover {
+  color: #ffffff;
+  text-shadow: 2px 2px 0 #2a5238;
+}
+
+.logo span {
+  background: linear-gradient(135deg, #ffff80, #b8ffd0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.social-links {
+  display: flex;
+  gap: 16px;           /* smaller gap between icons */
+  align-items: center;
+}
+
+.social-links a {
+  color: #b8ffd0;
+  font-size: 1.5rem;   /* slightly smaller icons */
+  transition: 0.1s linear;
+  text-decoration: none;
+  line-height: 1;
+}
+
+.social-links a:hover {
+  color: #ffff80;
+  transform: translateY(-2px);
+}
+
+/* Adjust the container's top margin to account for nav (optional) */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 16px;     /* add some side padding to match nav */
+}
+
 .container {
   max-width: 960px;
   margin: 0 auto;
@@ -306,6 +373,10 @@ footer {
   border-top: 2px solid #2a5238;
   padding-top: 20px;
   color: #6f9e8a;
+}
+
+footer p:first-child {
+  margin-bottom: 12px;
 }
 
 /* Pixel corners effect */
