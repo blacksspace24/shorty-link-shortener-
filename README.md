@@ -41,16 +41,16 @@ Visit http://localhost:3000 and start shortening URLs.
 
 Web Interface
 
--1.Paste a long URL into the input field.
--2.Click Shorten – get a short link like http://localhost:3000/abc123.
--3.Copy the link or use it immediately.
--4.Every click is counted and displayed in the recent links table.
+- 1.Paste a long URL into the input field.
+- 2.Click Shorten – get a short link like http://localhost:3000/abc123.
+- 3.Copy the link or use it immediately.
+- 4.Every click is counted and displayed in the recent links table.
 
 ### 🚀 Deployment
 
--Push your code to a GitHub repository.
--Click New + → Web Service → connect your repo.
--Use these settings:
+- Push your code to a GitHub repository.
+- Click New + → Web Service → connect your repo.
+- Use these settings:
 ```
 Build Command: npm install
 Start Command: node server.js
@@ -72,12 +72,12 @@ Click Deploy.
 
 ### Built With
 
--Express – web framework
--express-rate-limit – abuse protection
--request-ip – client IP extraction
--ua-parser-js – browser/OS/device detection
--geoip-lite – IP to location mapping
--Press Start 2P – pixel game font
+- Express – web framework
+- express-rate-limit – abuse protection
+- request-ip – client IP extraction
+- ua-parser-js – browser/OS/device detection
+- geoip-lite – IP to location mapping
+- Press Start 2P – pixel game font
 
 ### 🤝 Contributing
 Pull requests are welcome. For major changes, open an issue first.
