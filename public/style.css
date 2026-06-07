@@ -1,0 +1,439 @@
+/* Retro Game Theme - 8-bit style */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+  image-rendering: pixelated;
+}
+
+body {
+  font-family: 'Press Start 2P', 'Courier New', monospace;
+  background: #0a0f1e;
+  background-image: 
+    linear-gradient(0deg, #1a2a3a 1px, transparent 1px),
+    linear-gradient(90deg, #1a2a3a 1px, transparent 1px);
+  background-size: 20px 20px;
+  min-height: 100vh;
+  padding: 20px;
+  color: #b8ffd0;
+  position: relative;
+}
+
+/* CRT scanline effect */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 255, 0, 0.03) 0px,
+    rgba(0, 255, 0, 0.03) 2px,
+    transparent 2px,
+    transparent 6px
+  );
+  pointer-events: none;
+  z-index: 999;
+}
+
+/* Pixelated flicker animation */
+@keyframes flicker {
+  0% { opacity: 0.95; }
+  50% { opacity: 1; }
+  100% { opacity: 0.95; }
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  animation: flicker 0.15s infinite;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+  border: 4px solid #4affb5;
+  padding: 20px;
+  background: #0d1b1f;
+  box-shadow: 8px 8px 0 #0a3a2a;
+  text-shadow: 3px 3px 0 #0a3a2a;
+}
+
+header h1 {
+  font-size: 2rem;
+  letter-spacing: 2px;
+  color: #4affb5;
+  margin-bottom: 15px;
+}
+
+header h1 span {
+  display: inline-block;
+  transform: scale(1.02);
+}
+
+header p {
+  font-size: 0.7rem;
+  color: #8affc0;
+  line-height: 1.6;
+}
+
+.card {
+  background: #0b1418;
+  border: 4px solid #4affb5;
+  padding: 25px;
+  margin-bottom: 40px;
+  box-shadow: 8px 8px 0 #0a3a2a;
+}
+
+.input-group {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.input-group input {
+  flex: 1;
+  background: #071012;
+  border: 3px solid #4affb5;
+  padding: 15px;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.7rem;
+  color: #b8ffd0;
+  outline: none;
+  box-shadow: inset 2px 2px 0 #0a3a2a, 2px 2px 0 #0a3a2a;
+}
+
+.input-group input:focus {
+  border-color: #ffff80;
+  box-shadow: inset 2px 2px 0 #5a5a2a, 2px 2px 0 #5a5a2a;
+}
+
+.input-group button {
+  background: #2a5238;
+  border: none;
+  border-bottom: 4px solid #1a3320;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.7rem;
+  padding: 15px 25px;
+  color: #ffffb0;
+  cursor: pointer;
+  transition: all 0.05s linear;
+  text-transform: uppercase;
+  box-shadow: 3px 3px 0 #0a3a2a;
+}
+
+.input-group button:hover {
+  background: #3e7a52;
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0 #0a3a2a;
+}
+
+.input-group button:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 #0a3a2a;
+}
+
+.result {
+  margin-top: 30px;
+  padding: 20px;
+  background: #071012;
+  border-left: 8px solid #4affb5;
+  border-bottom: 2px solid #4affb5;
+  font-size: 0.65rem;
+}
+
+.result-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  color: #8affc0;
+}
+
+.copy-btn {
+  background: #1e2a2a;
+  border: 2px solid #4affb5;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.55rem;
+  padding: 6px 12px;
+  color: #b8ffd0;
+  cursor: pointer;
+}
+
+.copy-btn:hover {
+  background: #4affb5;
+  color: #071012;
+}
+
+.short-link-container {
+  margin: 10px 0 15px;
+  word-break: break-all;
+}
+
+.short-link {
+  color: #ffff80;
+  text-decoration: none;
+  font-size: 0.8rem;
+  border-bottom: 2px dotted #4affb5;
+}
+
+.short-link:hover {
+  color: #ffffff;
+  border-bottom: 2px solid #ffff80;
+}
+
+.click-badge {
+  display: inline-block;
+  background: #1e2a2a;
+  padding: 5px 10px;
+  border: 1px solid #4affb5;
+  font-size: 0.55rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.recent-section {
+  background: #0b1418;
+  border: 4px solid #4affb5;
+  padding: 25px;
+  box-shadow: 8px 8px 0 #0a3a2a;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #4affb5;
+  padding-bottom: 10px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #4affb5;
+  padding-bottom: 10px;
+}
+
+.section-header h2 {
+  font-size: 1rem;
+  color: #ffff80;
+  margin: 0;
+}
+
+.section-header .header-right {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.recent-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.link-item {
+  background: #071012;
+  padding: 12px;
+  border: 2px solid #2a5238;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  transition: transform 0.05s linear;
+}
+
+.link-item:hover {
+  transform: translateX(4px);
+  border-color: #ffff80;
+}
+
+.link-info {
+  flex: 1;
+  min-width: 180px;
+}
+
+.link-short {
+  font-size: 0.7rem;
+  color: #ffff80;
+  text-decoration: none;
+  word-break: break-all;
+}
+
+.link-original {
+  font-size: 0.5rem;
+  color: #6f9e8a;
+  margin-top: 6px;
+  word-break: break-all;
+  font-family: monospace;
+}
+
+.link-clicks {
+  background: #1a2a22;
+  padding: 4px 10px;
+  border: 1px solid #4affb5;
+  font-size: 0.55rem;
+  white-space: nowrap;
+}
+
+.loading, .empty {
+  text-align: center;
+  padding: 30px;
+  color: #6f9e8a;
+  font-size: 0.6rem;
+}
+
+footer {
+  text-align: center;
+  margin-top: 45px;
+  font-size: 0.5rem;
+  border-top: 2px solid #2a5238;
+  padding-top: 20px;
+  color: #6f9e8a;
+}
+
+/* Pixel corners effect */
+.card, .recent-section, header {
+  clip-path: polygon(
+    0% 8px, 8px 8px, 8px 0%,
+    calc(100% - 8px) 0%, calc(100% - 8px) 8px, 100% 8px,
+    100% calc(100% - 8px), calc(100% - 8px) calc(100% - 8px), calc(100% - 8px) 100%,
+    8px 100%, 8px calc(100% - 8px), 0% calc(100% - 8px)
+  );
+}
+
+/* Retro responsive */
+@media (max-width: 640px) {
+  body {
+    padding: 10px;
+  }
+  .input-group {
+    flex-direction: column;
+  }
+  header h1 {
+    font-size: 1.2rem;
+  }
+  .card, .recent-section {
+    padding: 15px;
+  }
+  .link-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.badge {
+  background: #1e2a2a;
+  padding: 5px 10px;
+  font-size: 0.55rem;
+  border: 1px solid #4affb5;
+  display: inline-block;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.clear-btn {
+  background: #2a1a1a;
+  border: 2px solid #ff6b6b;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.55rem;
+  padding: 5px 12px;
+  color: #ff9e9e;
+  cursor: pointer;
+  box-shadow: 2px 2px 0 #5a2a2a;
+  transition: 0.05s linear;
+  display: inline-block;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.clear-btn:hover {
+  background: #5a2a2a;
+  color: #ffffff;
+  border-color: #ffaaaa;
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0 #3a1a1a;
+}
+.clear-btn:active {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0 #3a1a1a;
+}
+
+.link-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.link-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.copy-recent-btn {
+  background: #1e2a2a;
+  border: 2px solid #4affb5;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.5rem;
+  padding: 5px 10px;
+  color: #b8ffd0;
+  cursor: pointer;
+  transition: all 0.05s linear;
+}
+
+.copy-recent-btn:hover {
+  background: #4affb5;
+  color: #071012;
+  transform: translate(-1px, -1px);
+}
+
+.copy-recent-btn:active {
+  transform: translate(1px, 1px);
+}
+
+/* Adjust clicks badge to sit nicely */
+.link-clicks {
+  background: #1a2a22;
+  padding: 4px 10px;
+  border: 1px solid #4affb5;
+  font-size: 0.55rem;
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .link-actions {
+    width: 100%;
+    justify-content: flex-start;
+    margin-top: 8px;
+  }
+}
+
+/* Retro pixel pointer – standard shape but blocky */
+body, button, a, input, .copy-btn {
+  cursor: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"%3E%3Cpolygon points="2,2 14,2 2,14" fill="%234affb5" /%3E%3C/svg%3E') 2 2, auto;
+}
+
+/* Loading cursor – pixel hourglass */
+.loading-cursor {
+  cursor: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"%3E%3Crect x="6" y="4" width="12" height="2" fill="%234affb5"/%3E%3Crect x="8" y="8" width="8" height="2" fill="%23ffff80"/%3E%3Crect x="10" y="12" width="4" height="2" fill="%23ffff80"/%3E%3Crect x="8" y="16" width="8" height="2" fill="%234affb5"/%3E%3C/svg%3E') 12 12, wait !important;
+}

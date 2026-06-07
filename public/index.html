@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>ShortLink — Free URL Shortener</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <style>
+  /* Optional: pixelated cursor (requires an image) */
+  /* body { cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><polygon points="2,2 14,2 14,14 2,14" fill="none" stroke="lime" stroke-width="2"/></svg>'), auto; } */
+</style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🔗 <span>Shorty</span></h1>
+      <p>Create short, memorable links in seconds</p>
+    </header>
+
+    <div class="card">
+      <form id="shortenForm">
+        <div class="input-group">
+          <input 
+            type="url" 
+            id="longUrl" 
+            placeholder="https://example.com/very/long/url/to/shorten" 
+            required
+            autocomplete="off"
+          >
+          <button type="submit">Shorten ✨</button>
+        </div>
+      </form>
+
+      <div id="result" class="result hidden">
+        <div class="result-header">
+          <span>✨ Your short link</span>
+          <button id="copyBtn" class="copy-btn">Copy</button>
+        </div>
+        <div class="short-link-container">
+          <a id="shortLink" href="#" target="_blank" class="short-link"></a>
+        </div>
+        <div class="stats">
+          <span id="clickStats" class="click-badge"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="recent-section">
+  <div class="section-header">
+  <h2>📊 Recent Links</h2>
+  <div class="header-right">
+    <span class="badge">Live clicks</span>
+    <button id="clearHistoryBtn" class="clear-btn">🗑️ CLEAR</button>
+  </div>
+</div>
+  <div id="recentList" class="recent-list">
+    <div class="loading">Loading your links...</div>
+  </div>
+</div>
+
+    <footer>
+      <p>Simple, fast, and free URL shortener. No tracking, no ads.</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
