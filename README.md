@@ -31,3 +31,17 @@ A fast, self‑hosted URL shortener with a pixel‑perfect retro game interface,
 git clone https://github.com/your-username/link-shortener.git
 cd link-shortener
 npm install
+
+Run Locally
+bash
+npm start
+Visit http://localhost:3000 and start shortening URLs.
+
+🧪 Usage
+
+Web Interface
+
+1. Paste a long URL into the input field.
+2. Click Shorten – get a short link like http://localhost:3000/abc123.
+3. Copy the link or use it immediately.
+4. Every click is counted and displayed in the recent links table.
